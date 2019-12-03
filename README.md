@@ -1,7 +1,7 @@
 JPush API Go Client
 ====================
 
-[![GoDoc](https://godoc.org/github.com/georgehao/jpush-api-go-client?status.svg)](https://godoc.org/github.com/georgehao/jpush-api-go-client) [![Build Status](https://travis-ci.org/DeanThompson/jpush-api-go-client.svg?branch=master)](https://travis-ci.org/DeanThompson/jpush-api-go-client)
+[![GoDoc](https://godoc.org/github.com/satanfire/jpush-api-go-client?status.svg)](https://godoc.org/github.com/satanfire/jpush-api-go-client) [![Build Status](https://travis-ci.org/satanfire/jpush-api-go-client.svg?branch=master)](https://travis-ci.org/satanfire/jpush-api-go-client)
 
 # 概述
 
@@ -9,12 +9,19 @@ JPush API Go Client
 
 官方 REST API 文档： [http://docs.jpush.cn/display/dev/REST+API](http://docs.jpush.cn/display/dev/REST+API)
 
+> 本项目原创自：https://github.com/DeanThompson/jpush-api-go-client.git  
+> 因不满足现有需求，故在原项目基础上做了一些改动  
+
+# 新增功能列表
+
+    * 针对厂商VIP用户，支持uri_activity, uri_action 字段的设置
+
 # 安装
 
 使用 go get 安装，无任何第三方依赖：
 
 ```sh
-go get github.com/georgehao/jpush-api-go-client
+go get github.com/satanfire/jpush-api-go-client
 ```
 
 # 使用方法
@@ -22,7 +29,7 @@ go get github.com/georgehao/jpush-api-go-client
 ## 1. 创建 JPushClient
 
 ```go
-import "github.com/georgehao/jpush-api-go-client"
+import "github.com/satanfire/jpush-api-go-client"
 
 const (
     appKey = ""
@@ -37,7 +44,7 @@ jclient := jpush.NewJPushClient(appKey, masterSecret)
 与推送有关的数据结构都在 push 包里
 
 ```go
-import "github.com/georgehao/jpush-api-go-client/push"
+import "github.com/satanfire/jpush-api-go-client/push"
 ```
 
 ### 2.1 创建 Platform 对象
