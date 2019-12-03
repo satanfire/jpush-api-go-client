@@ -3,7 +3,7 @@ package push
 import (
 	"encoding/json"
 
-	"github.com/georgehao/jpush-api-go-client/common"
+	"github.com/satanfire/jpush-api-go-client/common"
 )
 
 // “通知”对象，是一条推送的实体内容对象之一（另一个是“消息”）
@@ -42,8 +42,10 @@ func (nc *platformNotification) AddExtra(key string, value interface{}) {
 type AndroidNotification struct {
 	platformNotification
 
-	Title     string `json:"title,omitempty"`
-	BuilderId int    `json:"builder_id,omitempty"`
+	Title       string `json:"title,omitempty"`
+	BuilderId   int    `json:"builder_id,omitempty"`
+	UriActivity string `json:"uri_activity,omitempty"`
+	UriAction   string `json:"uri_action,omitempty"`
 }
 
 func NewAndroidNotification(alert string) *AndroidNotification {

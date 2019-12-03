@@ -1,6 +1,6 @@
 package push
 
-import "github.com/georgehao/jpush-api-go-client/common"
+import "github.com/satanfire/jpush-api-go-client/common"
 
 type Platform struct {
 	value []string

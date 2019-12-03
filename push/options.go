@@ -1,15 +1,15 @@
 package push
 
-import "github.com/georgehao/jpush-api-go-client/common"
+import "github.com/satanfire/jpush-api-go-client/common"
 
 // 推送可选项。
 type Options struct {
-	SendNo          int   `json:"sendno,omitempty"`
-	TimeToLive      int   `json:"time_to_live,omitempty"`
-	OverrideMsgId   int64 `json:"override_msg_id,omitempty"`
-	ApnsProduction  bool  `json:"apns_production"`
-	BigPushDuration int   `json:"big_push_duration,omitempty"`
-	ApnsCollapseId  string`json:"apns_collapse_id,omitempty"`
+	SendNo          int    `json:"sendno,omitempty"`
+	TimeToLive      int    `json:"time_to_live,omitempty"`
+	OverrideMsgId   int64  `json:"override_msg_id,omitempty"`
+	ApnsProduction  bool   `json:"apns_production"`
+	BigPushDuration int    `json:"big_push_duration,omitempty"`
+	ApnsCollapseId  string `json:"apns_collapse_id,omitempty"`
 }
 
 func NewOptions() *Options {
