@@ -32,6 +32,10 @@ func (a *Audience) SetTagAnd(tagAnds []string) {
 	a.set("tag_and", tagAnds)
 }
 
+func (a *Audience) SetTagNot(tagAnds []string) {
+	a.set("tag_not", tagAnds)
+}
+
 func (a *Audience) SetAlias(alias []string) {
 	a.set("alias", alias)
 }
